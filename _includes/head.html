@@ -23,6 +23,8 @@
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     <meta property="og:image" content="{{ site.url }}{% if page.headpic %}/images/{{ page.date | date: '%Y/%m' }}/{{ page.headpic }}{% else %}/favicon-192.png{% endif %}">
     
+    <meta http-equiv="refresh" content="0; url={{ page.url | replace:'index.html','' | prepend: site.url }}">
+    
     {% if site.enforce_ssl %}
     <script type="text/javascript">
         var enforce = "{{ site.enforce_ssl }}";
