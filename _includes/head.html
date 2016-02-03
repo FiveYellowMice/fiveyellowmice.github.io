@@ -23,7 +23,10 @@
     <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
     <meta property="og:image" content="{{ site.url }}{% if page.headpic %}/images/{{ page.date | date: '%Y/%m' }}/{{ page.headpic }}{% else %}/favicon-192.png{% endif %}">
     
-    <meta http-equiv="refresh" content="0; url={{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <script>
+		window.location = "{{ site.url }}" + window.location.pathname + window.location.search + window.location.hash;
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url={{ page.url | replace:'index.html','' | prepend: site.url }}"></noscript>
     
     {% if site.enforce_ssl %}
     <script type="text/javascript">
