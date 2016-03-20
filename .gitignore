@@ -9,5 +9,8 @@ Gemfile.lock
 *.kate-swp
 *.swp
 
+# Bower
+bower_components/
+
 # File manager
 .directory
